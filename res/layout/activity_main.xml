@@ -1,0 +1,206 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.aidforxzv10.MainActivity" >
+    
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:text="1)请先按执行顺序选择客户端" />
+    <CheckBox android:id="@+id/KF_cb"
+        android:text="快返"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text1" />
+    <CheckBox android:id="@+id/GP_cb"
+        android:text="果盘"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/KF_cb"
+        android:layout_alignTop="@id/KF_cb" />
+    <CheckBox android:id="@+id/HW_cb"
+        android:text="华为"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/GP_cb"
+        android:layout_alignTop="@id/GP_cb" />
+    <CheckBox android:id="@+id/BD_cb"
+        android:text="百度"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/HW_cb"
+        android:layout_alignTop="@id/HW_cb" />
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_below="@id/KF_cb"
+        android:text="2)然后选择各客户端要自动的任务\n(早8中12晚9上线3次)" />
+    <Spinner
+        android:id="@+id/spinnerClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/text2"
+        android:layout_alignTop="@id/text2" />
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text2"
+        android:textStyle="italic"
+        android:text="早8执行：" />
+    <CheckBox
+        android:id="@+id/MonthCard_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text3"
+        android:checked="true"
+        android:text="领月卡" />
+    <CheckBox
+        android:id="@+id/FriendlyCall_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/MonthCard_cb"
+        android:layout_toEndOf="@id/MonthCard_cb"
+        android:checked="true"
+        android:text="友情召唤" />
+    <CheckBox
+        android:id="@+id/SignIn_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/FriendlyCall_cb"
+        android:layout_toEndOf="@id/FriendlyCall_cb"
+        android:checked="true"
+        android:text="签到" />
+    <Spinner
+        android:id="@+id/spinnerActivity"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/MonthCard_cb" />
+    <CheckBox
+        android:id="@+id/simpleActivity_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerActivity"
+        android:layout_alignEnd="@id/spinnerActivity"
+        android:checked="true"
+        android:text="活动本去除\n金币和打卡" />
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerActivity"
+        android:textStyle="italic"
+        android:text="中12执行：" />
+    <CheckBox
+        android:id="@+id/Challenge_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text4"
+        android:checked="true"
+        android:text="挑战" />
+     <TextView
+        android:id="@+id/text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Challenge_cb"
+        android:textStyle="italic"
+        android:text="合适时执行：" />
+    <CheckBox
+        android:id="@+id/Stamina_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text5"
+        android:checked="true"
+        android:layout_marginBottom="10dip"
+        android:text="领体力" />
+    <CheckBox
+        android:id="@+id/Excavator_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/Stamina_cb"
+        android:layout_alignTop="@id/Stamina_cb"
+        android:checked="true"
+        android:text="挖掘机\n(无抢劫)" />
+    <CheckBox
+        android:id="@+id/FlyingChess_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/Excavator_cb"
+        android:layout_alignTop="@id/Excavator_cb"
+        android:text="飞行棋\n(无控钻)" />
+    <CheckBox
+        android:id="@+id/BrushMaterials_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Stamina_cb"
+        android:checked="true"
+        android:text="刷材料\n(魔血)" />
+    <CheckBox
+        android:id="@+id/Sell_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/BrushMaterials_cb"
+        android:layout_alignTop="@id/BrushMaterials_cb"
+        android:checked="true"
+        android:text="出售\n(一键)" />
+    <CheckBox
+        android:id="@+id/GuildBattle_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/Sell_cb"
+        android:layout_alignTop="@id/Sell_cb"
+        android:checked="true"
+        android:text="公会\n(报名)" />
+    
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:text="@string/hello_world"
+        android:layout_below="@id/BrushMaterials_cb" />
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="10dip"
+        android:text="开始" />
+    <Button
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/start"
+        android:layout_alignTop="@id/start"
+        android:layout_marginEnd="10dip"
+        android:text="关闭" />
+    <CheckBox android:id="@+id/Jump_cb"
+        android:text="本次\n饭点\n已领"
+        android:textSize="13sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/close"
+        android:layout_alignTop="@id/close"
+        android:layout_marginEnd="10dip" />
+    <EditText android:id="@+id/edit_text"
+        android:text="参考时间(X:X)"
+        android:textSize="11sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/Jump_cb"
+        android:layout_alignTop="@id/Jump_cb" />
+
+</RelativeLayout>
